@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>BYOB</title>
+
+    </head>
+
+    <body>
+        
+      
+
+        <div class="wrap">
+            <div class="intro_bg">
+  
+  
+              <div class="header">
+                <ul class="navigation">
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="order.html">ORDER</a></li>
+                    <li><a class="active" href="contact.html">CONTACT</a></li>
+                </ul>
+                  <!--
+                    <div class="searchArea">
+                      <form>
+                      <input type="search" placeholder="Search">
+                      <span>SEARCH</span>
+                      </form>
+                  </div>
+                -->
+                </div>
+
+                
+            </div>
+
+            
+        <div class="backgroundcolorcontact">
+
+            <div class="support">
+                <div class="support-form">
+                  <h2>Contact</h2>
+                  <form id="contact-form" action="/action_page.php">
+                    <div class="form-row">
+                      <label for="email">Your Email</label>
+                      <input type="text" id="email" name="email">
+                    </div>
+                    <div class="form-row">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-row">
+                      <label for="issue">What would you like to contact us about?</label>
+                      <select id="issue" name="issue">
+                        <option value="Selectyourissue">Select Your Issue</option>
+                        <option value="Mobileorder">Mobile Order</option>
+                        <option value="Offers">Offers</option>
+                        <option value="Payment">Payment</option>
+                        <option value="Technicalerrors">Technical Errors</option>
+                        <option value="gerenralInquiry">General Inquiry</option>
+                        <option value="restaurantExpreience">Restaurant Experience</option>
+                      </select>
+                    </div>
+                    <div class="form-row">
+                      <label for="describe">Describe Your Issue</label>
+                      <textarea name="describe" id="describe" rows="5"></textarea>
+                    </div>
+                    <div class="form-row">
+                      <input type="submit" value="Submit" onclick="showPopup();">
+                    </div>
+                  </form>
+                </div>
+                
+
+            </div>
+              
+
+            </div>
+
+
+        
+        </div>
+
+      </div>
+      <div class="popup-message" id="popup1">
+        <span class="close" onclick="closePopup1()">&times;</span>
+        <p>Thank you! We've received your message and will respond within 24 hours.</p>
+      </div>
+
+      <script>
+        function showPopup() {
+          console.log("Button clicked!");
+          var popup = document.getElementById("popup1");
+          popup.classList.add("active");
+          document.getElementById("contact-form").reset();
+        }
+        
+        function closePopup1() {
+          document.getElementById("popup1").style.display = "none";
+        }
+        </script>
+        
+        
+
+
+</body>
+</html>
